@@ -1,0 +1,3 @@
+ruby -a -F, -n -e 'print "#{$F[0]},#{$F[3]}"' jagariko.log
+
+ruby -a -F, -n -e 'print "%s,%s" % [$F[0], $F[3]]' jagariko.log

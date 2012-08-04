@@ -1,0 +1,3 @@
+ruby -n -e 'print if $_.include?("server4")' jagariko.log
+
+ruby -n -e 'print if /server4/ =~ $_' jagariko.log

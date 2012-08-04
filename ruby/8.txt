@@ -1,0 +1,1 @@
+ruby -e 'pages = Hash.new(0); File.read("jagariko.log").split.map {|a| a.split(",")[3] }.map {|p| pages[p] += 1 }; pm = pages.max {|a, b| a.last <=> b.last }; puts "%s %s" % [pm.last, pm.first]'

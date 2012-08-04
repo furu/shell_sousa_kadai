@@ -1,0 +1,1 @@
+ruby -e 'user_ids = []; File.open("jagariko.log") {|io| io.each_line {|line| user_ids << line.split(",")[2] }}; puts user_ids.uniq.select {|id| id.to_i >= 10 }.sort'

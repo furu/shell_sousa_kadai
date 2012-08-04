@@ -1,0 +1,1 @@
+ruby -n -e 'print' jagariko.log

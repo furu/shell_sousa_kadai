@@ -1,0 +1,1 @@
+ruby -e 'server_names = Hash.new(0); File.open("jagariko.log") {|io| io.each_line {|line| server_names[line.split(",").first] += 1 }}; server_names.each {|k, v| puts "%s %s" % [v, k.sub(/server/, "xxx")] }'
