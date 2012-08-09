@@ -46,7 +46,7 @@ http://d.hatena.ne.jp/Yamashiro0217/20120727/1343371036
 ## 問1 このファイルを表示しろ
 
 ```ruby
-ruby -n -e 'print' jagariko.log
+ruby -p -e '' jagariko.log
 ```
 
 ### puts
