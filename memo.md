@@ -61,9 +61,13 @@ ruby -p -e '' jagariko.log
 ## 問2 このファイルからサーバ名とアクセス先だけ表示しろ
 
 ```ruby
-ruby -a -F, -n -e 'print "#{$F[0]},#{$F[3]}"' jagariko.log
+ruby -paF, -e '$_="#{$F[0]},#{$F[3]}"' jagariko.log
 
-ruby -a -F, -n -e 'print "%s,%s" % [$F[0], $F[3]]' jagariko.log
+ruby -paF, -e '$_="%s,%s" % [$F[0], $F[3]]' jagariko.log
+
+ruby -paF, -e '$_="%s,%s" % $F.values_at(0,3)' jagariko.log
+
+ruby -pe '$_.sub!(/,.*,/,",")' jagariko.log
 ```
 
 * chomp!
